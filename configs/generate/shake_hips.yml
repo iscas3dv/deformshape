@@ -1,0 +1,10 @@
+experiment_name: 'shake_hips'
+checkpoint_path: 'logs/shake_hips/checkpoints/model_final.pth'
+num_instances: 214
+latent_dim: 128
+part_num: 20
+rank: 5
+model_type: 'sine'
+hidden_num: 128
+hyper_hidden_layers: 1
+hyper_hidden_features: 256

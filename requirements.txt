@@ -1,0 +1,9 @@
+configargparse
+pyyaml
+scipy
+scikit-image
+trimesh
+tensorboard
+tqdm
+sklearn
+plyfile

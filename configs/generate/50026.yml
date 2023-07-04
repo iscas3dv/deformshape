@@ -1,0 +1,9 @@
+experiment_name: '50026_train'
+checkpoint_path: 'models/50026_train_sal/model_final.pth'
+num_instances: 4350
+latent_dim: 128
+part_num: 20
+model_type: 'sine'
+hidden_num: 128
+hyper_hidden_layers: 2
+hyper_hidden_features: 256

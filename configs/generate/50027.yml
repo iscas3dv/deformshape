@@ -1,0 +1,9 @@
+experiment_name: 'male_train'
+checkpoint_path: 'logs/male_train/checkpoints/model_current.pth'
+num_instances: 582
+latent_dim: 128
+part_num: 20
+model_type: 'sine'
+hidden_num: 128
+hyper_hidden_layers: 2
+hyper_hidden_features: 256

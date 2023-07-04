@@ -1,0 +1,9 @@
+experiment_name: elephantLN0
+checkpoint_path: 'logs/elephantLN0/checkpoints/model_current.pth'
+num_instances: 1002
+latent_dim: 128
+part_num: 20
+model_type: 'sine'
+hidden_num: 128
+hyper_hidden_layers: 3
+hyper_hidden_features: 256
