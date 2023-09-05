@@ -50,9 +50,6 @@ p.add_argument('--point_cloud_path', type=str, default='',
 p.add_argument('--latent_dim', type=int,default=128, help='latent code dimension.')
 p.add_argument('--hidden_num', type=int,default=128, help='hidden layer dimension of deform-net.')
 p.add_argument('--part_num', type=int,default=10, help='number of part')
-p.add_argument('--loss_grad_deform', type=float,default=5, help='loss weight for deformation smoothness prior.')
-p.add_argument('--loss_grad_temp', type=float,default=1e2, help='loss weight for normal consistency prior.')
-p.add_argument('--loss_correct', type=float,default=1e2, help='loss weight for minimal correction prior.')
 
 p.add_argument('--num_instances', type=int,default=5, help='numbers of instance in the training set.')
 p.add_argument('--expand', type=float,default=-1, help='expansion of shape surface.')
