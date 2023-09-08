@@ -127,7 +127,7 @@ point_cloud_path: data/train_data/50002/surface_pts_n_normal
 ```
 Then run the code:
 ```
-train.py --config config/train/50002.yml
+python train.py --config config/train/50002.yml
 ```
 The code will make a folder `logs` and the parameters of trained model will be saved in it.
 # 4. Shape Generation
