@@ -89,7 +89,7 @@ def write_data(shapes_info, output_folder, animal_kind, mesh_all_vertices, scale
         mesh_scale.export(output_name_scaled_mesh)
 
         #2. sdf
-        cloud = get_surface_point_cloud(mesh_scale, surface_point_method='scan', scan_count=20, scan_resolution=400,
+        cloud = get_surface_point_cloud(mesh_scale, surface_point_method='scan', scan_count=100, scan_resolution=1600,
                                         bounding_radius=1, )
         vertices_free, sdf = cloud.sample_sdf_near_surface(500000, sign_method='depth')
         points_in_sphere = np.concatenate([vertices_free, sdf[:, None]], axis=1)
