@@ -1,0 +1,17 @@
+eval_split: split/train/50021.txt
+checkpoint_path: 'models/50021/model_final.pth'
+expand: -1
+experiment_name: 50021_train
+hidden_num: 128
+latent_dim: 128
+part_num: 20
+hyper_hidden_layers: 3
+hyper_hidden_features: 256
+logging_root: ./eval
+model_type: sine
+num_instances: 539
+point_cloud_path: data/train_data/50021/surface_pts_n_normal
+eval_corr_split: split/train/50021_train_100.txt
+mesh_path: data/train_data/50021/mesh
+geo_mesh_path: data/train_data/50021/mesh_for_geodesic_distance
+geodesic_distance_path: data/train_data/50021/distance_matrix

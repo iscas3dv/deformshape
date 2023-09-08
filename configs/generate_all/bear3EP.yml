@@ -1,0 +1,17 @@
+eval_split: split/train/bear3EP.txt
+checkpoint_path: 'models/bear3EP/model_final.pth'
+expand: -1
+experiment_name: bear3EP_train
+hidden_num: 128
+latent_dim: 128
+part_num: 20
+hyper_hidden_layers: 3
+hyper_hidden_features: 256
+logging_root: ./eval
+model_type: sine
+num_instances: 2283
+point_cloud_path: data/train_data/beear3EP/surface_pts_n_normal
+eval_corr_split: split/train/beear3EP_train_100.txt
+mesh_path: data/train_data/beear3EP/mesh
+geo_mesh_path: data/train_data/beear3EP/mesh_for_geodesic_distance
+geodesic_distance_path: data/train_data/beear3EP/distance_matrix

@@ -1,0 +1,17 @@
+eval_split: split/train/elephantLN0.txt
+checkpoint_path: 'models/elephantLN0/model_final.pth'
+experiment_name: elephantN0_train
+expand: 0.01
+hidden_num: 128
+latent_dim: 128
+part_num: 20
+hyper_hidden_layers: 3
+hyper_hidden_features: 256
+logging_root: ./eval
+model_type: sine
+num_instances: 1002
+point_cloud_path: data/train_data/elephantLN0/surface_pts_n_normal
+eval_corr_split: split/train/elephantLN0_train_100.txt
+mesh_path: data/train_data/elephantLN0/mesh
+geo_mesh_path: data/train_data/elephantLN0/mesh_for_geodesic_distance
+geodesic_distance_path: data/train_data/elephantLN0/distance_matrix

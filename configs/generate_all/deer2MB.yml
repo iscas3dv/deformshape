@@ -1,0 +1,17 @@
+eval_split: split/train/deer2MB.txt
+checkpoint_path: 'models/deer2MB/model_final.pth'
+expand: 0.01
+experiment_name: deer2MB_train
+hidden_num: 128
+latent_dim: 128
+part_num: 20
+hyper_hidden_layers: 3
+hyper_hidden_features: 256
+logging_root: ./eval
+model_type: sine
+num_instances: 861
+point_cloud_path: data/train_data/deer2MB/surface_pts_n_normal
+eval_corr_split: split/train/deer2MB_train_100.txt
+mesh_path: data/train_data/deer2MB/mesh
+geo_mesh_path: data/train_data/deer2MB/mesh_for_geodesic_distance
+geodesic_distance_path: data/train_data/deer2MB/distance_matrix

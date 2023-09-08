@@ -22,7 +22,7 @@ for config_file in config_files:
     with open(config_file,'r') as stream:
         meta_params = yaml.safe_load(stream)
     fitting_results_path = os.path.join(meta_params["logging_root"],meta_params["experiment_name"])
-    gt_mesh_path = os.path.join(os.path.dirname(meta_params["point_cloud_path"]),"mesh")
+    gt_mesh_path = meta_params["mesh_path"]
     with open(meta_params['eval_split'],'r') as file:
         all_names = file.read().split('\n')
         all_names = [name for name in all_names if len(name)>3]

@@ -47,7 +47,7 @@ DeformingThings4D
 First, please run this code to generate train/eval data for DeformingThings4D:
 ```
 python data/dataprocess_DeformingThings4D.py --dataset_folder $DeformingThings4D_folder_path$ 
--- output_folder data/train_data(or test_data) --animal_kind bear3EP --mode train(or test)
+--output_folder data/train_data(or test_data) --animal_kind bear3EP --mode train(or test)
 ```
 Then, the preparing data are organized as follows:
 ```
@@ -134,18 +134,24 @@ The code will make a folder `logs` and the parameters of trained model will be s
 ## Generating shapes in training set
 Directly use the latent code optimzed during training to generate a shapes:
 ```
-python generate.py --config configs/generate/50002.yml --subject_idx 0,1,2,-1
+python generate.py --config configs/generate_all/50002.yml --subject_idx 0,1,2,-1
 ```
 subject_idx is the shape id in training split. `-1` represents template code. We found that `--subject_idx -1` is invalid for `configargparse`. There must be a id or ids before `-1`.
 ## Generating all shapes in training set
 ```
-python evaluate.py --config configs/eval_train/50002.yml --type generate
+python evaluate.py --config configs/generate_all/50002.yml --type generate
 ```
 Optimized results will be saved in `eval`
 
-## Fitting all shapes from point clouds
+## Fitting all shapes from full observed point clouds
 ```
 python evaluate.py --config configs/eval/50002.yml --type fit
+```
+Optimized results will be saved in `eval`
+
+## Fitting all shapes from partial observed point clouds
+```
+python evaluate.py --config configs/eval_partial/50002.yml --type fit
 ```
 Optimized results will be saved in `eval`
 

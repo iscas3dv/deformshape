@@ -1,0 +1,17 @@
+eval_split: split/train/cetaceaUW.txt
+checkpoint_path: 'models/cetaceaUW/model_final.pth'
+experiment_name: cetaceaUW_train
+expand: 0.01
+hidden_num: 128
+latent_dim: 128
+part_num: 20
+hyper_hidden_layers: 3
+hyper_hidden_features: 256
+logging_root: ./eval
+model_type: sine
+num_instances: 1133
+point_cloud_path: data/train_data/cetaceaUW/surface_pts_n_normal
+eval_corr_split: split/train/cetaceaUW_train_100.txt
+mesh_path: data/train_data/cetaceaUW/mesh
+geo_mesh_path: data/train_data/cetaceaUW/mesh_for_geodesic_distance
+geodesic_distance_path: data/train_data/cetaceaUW/distance_matrix

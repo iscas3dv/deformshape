@@ -3,7 +3,7 @@ epochs: 30
 epochs_til_checkpoint: 5
 eval_split: split/eval/50026.txt
 checkpoint_path: models/50026/model_final.pth
-experiment_name: 50026_eval
+experiment_name: 50026_eval_partial
 expand: -1
 hidden_num: 128
 latent_dim: 128
@@ -16,7 +16,7 @@ max_points: 500000
 model_type: sine
 num_instances: 699
 on_surface_points: 4000
-point_cloud_path: data/test_data/50026/surface_pts_n_normal
+point_cloud_path: data/test_data/50026/partial_points
 steps_til_summary: 100
 eval_corr_split: split/eval/50026_test_100.txt
 mesh_path: data/test_data/50026/mesh

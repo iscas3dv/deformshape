@@ -1,8 +1,0 @@
-experiment_name: 'chair'
-checkpoint_path: 'logs/chair/checkpoints/model_epoch_0070.pth'
-num_instances: 100
-latent_dim: 128
-model_type: 'sine'
-hidden_num: 128
-hyper_hidden_layers: 1
-hyper_hidden_features: 256

@@ -1,0 +1,17 @@
+eval_split: split/train/bunnyQ.txt
+checkpoint_path: 'models/bunnyQ/model_final.pth'
+experiment_name: bunnyQ_train
+expand: 0.01
+hidden_num: 128
+latent_dim: 128
+part_num: 20
+hyper_hidden_layers: 3
+hyper_hidden_features: 256
+logging_root: ./eval
+model_type: sine
+num_instances: 1323
+point_cloud_path: data/train_data/bunnyQ/surface_pts_n_normal
+eval_corr_split: split/train/bunnyQ_train_100.txt
+mesh_path: data/train_data/bunnyQ/mesh
+geo_mesh_path: data/train_data/bunnyQ/mesh_for_geodesic_distance
+geodesic_distance_path: data/train_data/bunnyQ/distance_matrix

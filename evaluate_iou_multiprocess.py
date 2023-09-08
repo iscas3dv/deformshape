@@ -5,9 +5,8 @@ from tqdm import tqdm
 import numpy as np
 import mesh_to_sdf 
 import multiprocessing as mul
-# os.environ['PYOPENGL_PLATFORM'] = 'osmesa'
-os.environ["PYOPENGL_PLATFORM"] = "egl"
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+os.environ['PYOPENGL_PLATFORM'] = 'osmesa'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 # config_files = ["configs/eval_trainset/50002.yml",
 #                 "configs/eval_trainset/50004.yml",
 #                 "configs/eval_trainset/50007.yml",
@@ -27,7 +26,7 @@ for config_file in config_files:
     with open(config_file,'r') as stream:
         meta_params = yaml.safe_load(stream)
     fitting_results_path = os.path.join(meta_params["logging_root"],meta_params["experiment_name"])
-    gt_mesh_path = os.path.join(os.path.dirname(meta_params["point_cloud_path"]),"mesh")
+    gt_mesh_path = meta_params["mesh_path"]
     with open(meta_params['eval_split'],'r') as file:
         all_names = file.read().split('\n')
         all_names = [name for name in all_names if len(name)>3]
@@ -56,7 +55,6 @@ for config_file in config_files:
         gt_inner_idx = ~gt_point_cloud.is_outside(grid_sample)
         iou = float(np.sum((fitted_inner_idx*gt_inner_idx).astype(int)))/float(np.sum((fitted_inner_idx+gt_inner_idx).astype(int)))
         return iou
-    print("begin pool")
     pool = mul.Pool(32)
     error_list = pool.map(calculate_iou, list(range(len(all_names))))
     print(len(error_list))

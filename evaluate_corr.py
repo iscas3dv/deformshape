@@ -28,8 +28,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 #                 "configs/eval_cloud/50025.yml",
 #                 "configs/eval_cloud/50026.yml",
 #                 "configs/eval_cloud/50027.yml"]
-# config_files = ["configs/eval/bear3EP.yml"]
-config_files = ["configs/eval/50002.yml"]
+config_files = ["configs/eval/bear3EP.yml"]
 
 total_error_list = []
 with torch.no_grad():
@@ -68,7 +67,7 @@ with torch.no_grad():
             embedding_list.append(np.loadtxt(embedding_file_name))
             trans_list.append(np.loadtxt(trans_file_name))
             # mesh_path = os.path.join(os.path.dirname(meta_params['point_cloud_path']),"scaled_mesh",file+'.obj')
-            mesh_path = os.path.join(meta_params['mesh_path'],file+'.obj')
+            mesh_path = os.path.join(meta_params['geo_mesh_path'],file+'.obj')
             if os.path.exists(mesh_path):
                 mesh=trimesh.load(mesh_path,process=False)
             else:
