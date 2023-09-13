@@ -1,6 +1,6 @@
 %% Run this script in the off directory to convert all the .ply files to .mat files with the same name
 clear all; close all
-addpath(genpath('./../../../Tools/'))
+addpath(genpath('./../../../../Tools/'))
 d = dir('./*.ply')
 N_models = length(d);
 

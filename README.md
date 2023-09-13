@@ -110,16 +110,18 @@ train_data
 |   |   └─── *.mat
 ...
 ```
-The geodesic distances are only used for evaluation followed the steps.
+The geodesic distances are only used for evaluation followed the steps. It takes a long time to generate geodesic distance matrix.
+If you want to evaluate the correspondence result, you could follow the steps below to generate distance matrix.
+The original matlab code is provided by [Unsupervised Learning Of Dense Shape Correspondence](https://github.com/OshriHalimi/unsupervised_learning_of_dense_shape_correspondence)
+  
 
 1.copy ```data/convert_ply_to_mat.m``` to```data/train_data/$subject$(eg, 50002)/mesh_for_geodesic_distance```
 
 2.run ```data/train_data/$subject$(eg, 50002)/mesh_for_geodesic_distance/convert_ply_to_mat.m```
 
-3.make a new directory in ```data/train_data/$subject$(eg, 50002)/distance_matrix```               
+3.open ```data/faust_calc_distance_matrix.m```, change ```path_shapes, path_distance_matrix```, then run the code ```data/faust_calc_distance_matrix.m```
 
-4.open ```data/faust_calc_distance_matrix.m```, change ```path_shapes, path_distance_matrix```, then run the code ```data/faust_calc_distance_matrix.m```
-
+4.the distance matrix will be generated in 3.make a new directory in ```data/train_data/$subject$(eg, 50002)/distance_matrix```   
 # 3. Training
 Before training, set the `point_cloud_path` in the config files. For example,
 ```
