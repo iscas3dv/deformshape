@@ -125,11 +125,11 @@ The original matlab code is provided by [Unsupervised Learning Of Dense Shape Co
 # 3. Training
 Before training, set the `point_cloud_path` in the config files. For example,
 ```
-point_cloud_path: data/train_data/50002/surface_pts_n_normal
+point_cloud_root: data/train_data/
 ```
 Then run the code:
 ```
-python train.py --config config/train/50002.yml
+python train.py --config configs/train/50002.yml
 ```
 The code will make a folder `logs` and the parameters of trained model will be saved in it.
 # 4. Shape Generation
