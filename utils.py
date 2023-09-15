@@ -311,7 +311,7 @@ class Differential_Relevant_Terms(torch.autograd.Function):
             Z = X * rB
             M = Z+torch.diag_embed(grad_sigma)
             norm_M = torch.sum(M ** 2, [-1,-2],keepdim=True).sqrt()
-            print(norm_M.mean())
+            #print(norm_M.mean())
             scale = torch.where(norm_M>eps, eps/norm_M,torch.ones_like(norm_M))
             grad_input = U @ (M * scale) @ VT
         return grad_input, None, None
