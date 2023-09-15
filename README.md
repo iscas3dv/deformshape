@@ -135,7 +135,7 @@ The code will make a folder `logs` and the parameters of trained model will be s
 # 4. Shape Generation
 Before generateing, set the checkpoint path in the corresponding config files. For example,
 ```
-checkpoint_path: 'logs/50002_train/model_final.pth'
+checkpoint_path: 'logs/50002_train/checkpoints/model_final.pth'
 ```
 ## Generating shapes in training set
 
