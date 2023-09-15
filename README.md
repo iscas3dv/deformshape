@@ -141,7 +141,7 @@ checkpoint_path: 'logs/50002_train/checkpoints/model_final.pth'
 
 Directly use the latent code optimzed during training to generate a shapes:
 ```
-python generate.py --config configs/generate_all/50002.yml --subject_idx 0,1,2,-1
+python generate.py --config configs/generate_all/50002.yml --subject_idx 300,301,302,-1
 ```
 subject_idx is the shape id in training split. `-1` represents template code. We found that `--subject_idx -1` is invalid for `configargparse`. There must be a id or ids before `-1`.
 ## Generating all shapes in training set
