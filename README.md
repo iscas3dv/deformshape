@@ -164,6 +164,7 @@ Optimized results will be saved in `eval`
 
 
 # 5. Accuracy
+Before evaluating, change the `config_files` in the corresponding evaluating file.
 ## Chamfer distance
 ```
 python evaluate_chamfer.py
