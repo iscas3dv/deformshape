@@ -140,6 +140,11 @@ python generate.py --config configs/generate_all/50002.yml --subject_idx 0,1,2,-
 ```
 subject_idx is the shape id in training split. `-1` represents template code. We found that `--subject_idx -1` is invalid for `configargparse`. There must be a id or ids before `-1`.
 ## Generating all shapes in training set
+Before generateing, set the checkpoint path in the corresponding config files. For example,
+```
+checkpoint_path: 'logs/50002_train/model_final.pth'
+```
+Then run the code:
 ```
 python evaluate.py --config configs/generate_all/50002.yml --type generate
 ```
