@@ -7,18 +7,9 @@ import mesh_to_sdf
 import multiprocessing as mul
 os.environ['PYOPENGL_PLATFORM'] = 'osmesa'
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-# config_files = ["configs/eval_trainset/50002.yml",
-#                 "configs/eval_trainset/50004.yml",
-#                 "configs/eval_trainset/50007.yml",
-#                 "configs/eval_trainset/50009.yml",
-#                 "configs/eval_trainset/50020.yml",
-#                 "configs/eval_trainset/50021.yml",
-#                 "configs/eval_trainset/50022.yml",
-#                 "configs/eval_trainset/50025.yml",
-#                 "configs/eval_trainset/50026.yml",
-#                 "configs/eval_trainset/50027.yml"
-#                 ]
-config_files = ["configs/eval/50002.yml" ]
+
+config_files = ["configs/generate_all/50002.yml"]
+
 total_error_list = []
 sample_point_count = 500000
 voxel_resolution = 128

@@ -18,17 +18,8 @@ from scipy.io import loadmat
 from tqdm import tqdm
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-# config_files = ["configs/eval_cloud/50002.yml",
-#                 "configs/eval_cloud/50004.yml",
-#                 "configs/eval_cloud/50007.yml",
-#                 "configs/eval_cloud/50009.yml",
-#                 "configs/eval_cloud/50020.yml",
-#                 "configs/eval_cloud/50021.yml",
-#                 "configs/eval_cloud/50022.yml",
-#                 "configs/eval_cloud/50025.yml",
-#                 "configs/eval_cloud/50026.yml",
-#                 "configs/eval_cloud/50027.yml"]
-config_files = ["configs/eval/bear3EP.yml"]
+
+config_files = ["configs/generate_all/50002.yml"]
 
 total_error_list = []
 with torch.no_grad():
