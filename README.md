@@ -1,6 +1,6 @@
-This is the code of "Self-supervised Learning of Implicit Shape Representation with Dense Correspondence for Deformable Objects".
+# Self-supervised Learning of Implicit Shape Representation with Dense Correspondence for Deformable Objects
 
-It is adapted from the code of [DIF](https://github.com/microsoft/DIF-Net). We appreciate their significant contributions to the field of shape representation.
+This is the code of the ICCV'2023 paper ["Self-supervised Learning of Implicit Shape Representation with Dense Correspondence for Deformable Objects"](https://arxiv.org/abs/2308.11198).
 
 # 1. Installation
 ## Clone this repository.
@@ -178,3 +178,7 @@ python evaluate_iou_multiprocess.py
 ```
 python evaluate_corr.py
 ```
+
+# 6. Acknowledgement
+It is adapted from the code of [DIF](https://github.com/microsoft/DIF-Net). We appreciate their significant contributions to the field of shape representation.
+
