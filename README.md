@@ -15,7 +15,7 @@ conda create -n deformshape python=3.9
 conda activate deformshape
 ```
 2. Install pytorch.
-3. Install torchmeta. Before installation, comment [L34~35 in 
+3. Install [torchmeta](https://github.com/tristandeleu/pytorch-meta/tree/794bf82348fbdc2b68b04f5de89c38017d54ba59). Before installation, comment [L34~35 in 
 pytorch-meta/setup.py](https://github.com/tristandeleu/pytorch-meta/blob/d55d89ebd47f340180267106bde3e4b723f23762/setup.py#L34), which limits the pytorch vision. We have tested that it is compatible with higher pytorch version.
 Additionally, comment out [line 3 in pytorch-meta/torchmeta/datasets/utils.py](https://github.com/tristandeleu/pytorch-meta/blob/794bf82348fbdc2b68b04f5de89c38017d54ba59/torchmeta/datasets/utils.py#L3).
 ```
