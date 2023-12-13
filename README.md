@@ -1,6 +1,9 @@
 # Self-supervised Learning of Implicit Shape Representation with Dense Correspondence for Deformable Objects
 
-This is the code of the ICCV'2023 paper ["Self-supervised Learning of Implicit Shape Representation with Dense Correspondence for Deformable Objects"](https://arxiv.org/abs/2308.11198).
+### Self-supervised Learning of Implicit Shape Representation with Dense Correspondence for Deformable Objects
+Baowen Zhang, Jiahe Li, Xiaoming Deng, Yinda Zhang, Cuixia Ma, Hongan Wang
+
+[Project page](https://iscas3dv.github.io/deformshape/)   &nbsp;  &nbsp;  &nbsp;  [Paper](https://arxiv.org/abs/2308.12590)
 
 # 1. Installation
 ## Clone this repository.
